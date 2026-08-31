@@ -1,0 +1,16 @@
+---
+id: visual-countdown
+name: Visual Countdown
+summary: Themed visual countdown
+desc: Count down to any event with original pixel-art themes for birthdays, travel, holidays, and more.
+author: ethangyn
+fileName: visual_countdown.star
+packageName: visualcountdown
+recommendedInterval: 15
+supports2x: true
+category: utilities
+tags:
+  - lifestyle
+  - time
+  - utility
+  - wide 2x support
