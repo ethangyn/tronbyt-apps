@@ -36,7 +36,20 @@ Show how long it takes to get from one place to another, with a large travel tim
 
 Pick a start and end, name them (for example HOME and WORK), and choose drive, walk, bike, or transit. Driving can show extra minutes when traffic is worse than usual.
 
-You add your own Google Routes API key. Enable the Routes API on a Google Cloud key and paste it into the app. Unused space stays black.
+You add your own Google Routes API key. Unused space stays black.
+
+### Google Routes API key
+
+Google charges after a monthly free allowance. You need a Google account and a billing method on the project, even if you stay within the free quota.
+
+1. Open the [Google Cloud Console](https://console.cloud.google.com/) and create a project, or pick one you already have.
+2. Open [billing](https://console.cloud.google.com/billing) and link a billing account to that project.
+3. Enable the [Routes API](https://console.cloud.google.com/apis/library/routes.googleapis.com) on the project.
+4. Open [Credentials](https://console.cloud.google.com/apis/credentials), choose **Create credentials**, then **API key**.
+5. Copy the key. Restrict it to the Routes API so it cannot be used for other Google services.
+6. In Visual Commute, paste the key into **Google Routes API key**.
+
+Google’s own setup page is [Set up the Routes API](https://developers.google.com/maps/documentation/routes/get-api-key).
 
 Supports **64×32** and **128×64** displays.
 

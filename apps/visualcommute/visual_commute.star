@@ -692,7 +692,7 @@ def get_schema():
             schema.Text(
                 id = "api_key",
                 name = "Google Routes API key",
-                desc = "Your key from Google Cloud, with the Routes API enabled.",
+                desc = "Create a Google Cloud API key, enable Routes API, then paste it here. See the project README.",
                 icon = "key",
             ),
             schema.Toggle(
