@@ -1,6 +1,6 @@
 # Tronbyt Apps
 
-Apps for [Tronbyt](https://github.com/tronbyt/server) and compatible Tidbyt displays, written in Starlark and rendered with [Pixlet](https://github.com/tronbyt/pixlet).
+Free apps for [Tronbyt](https://github.com/tronbyt/server) and compatible Tidbyt displays.
 
 ## Visual Countdown
 
@@ -18,7 +18,7 @@ Count down to an event with a large remaining-time value, the event name, and an
 | --- | --- | --- | --- |
 | ![Work](docs/previews/work.gif) | ![Graduation](docs/previews/graduation.gif) | ![Baby](docs/previews/baby.gif) | ![Home](docs/previews/home.gif) |
 
-Themes: celebration, birthday, travel, summer, holiday, launch, wedding, work, graduation, baby, and home.
+Themes: celebration (the default), birthday, travel, summer, holiday, launch, wedding, work, graduation, baby, and home.
 
 Choose the event name and date, optionally count down to an exact time, and personalize the display with a theme and custom colors. Your location keeps the countdown aligned with your local date and time.
 
@@ -26,7 +26,21 @@ Display the remaining time automatically or in days, weeks, months, years, month
 
 Supports **64×32** and **128×64** displays.
 
-## Development
+## Use it
+
+Anyone can use this. It is licensed under [Apache License 2.0](LICENSE).
+
+### On Tronbyt
+
+1. Open Tronbyt Manager as an administrator.
+2. Set **Custom App Repo** to `https://github.com/ethangyn/tronbyt-apps.git`
+3. Refresh the app list. Leave the main system app repo as it is.
+4. On your device, add **Visual Countdown**.
+5. Enter an event name and date, pick a theme, and save.
+
+If the app does not appear, refresh the custom app repo again.
+
+### On your computer
 
 Install [Pixlet](https://github.com/tronbyt/pixlet/releases/latest) and put it on your `PATH`. This repository targets Pixlet v0.53.1.
 
