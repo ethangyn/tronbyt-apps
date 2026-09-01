@@ -1,0 +1,16 @@
+---
+id: visual-commute
+name: Visual Commute
+summary: Themed travel time
+desc: Show how long it takes to get from one place to another, with original pixel-art scenes for driving, walking, biking, and transit.
+author: ethangyn
+fileName: visual_commute.star
+packageName: visualcommute
+recommendedInterval: 5
+supports2x: true
+category: transportation
+tags:
+  - transportation
+  - time
+  - utility
+  - wide 2x support
