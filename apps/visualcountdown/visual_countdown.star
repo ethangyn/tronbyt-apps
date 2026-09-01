@@ -26,6 +26,10 @@ THEME_SUMMER = "summer"
 THEME_HOLIDAY = "holiday"
 THEME_LAUNCH = "launch"
 THEME_WEDDING = "wedding"
+THEME_WORK = "work"
+THEME_GRADUATION = "graduation"
+THEME_BABY = "baby"
+THEME_HOME = "home"
 
 VALID_MODES = {
     MODE_DAYS: True,
@@ -37,56 +41,84 @@ VALID_MODES = {
     MODE_YMD: True,
 }
 
-# Theme palettes control background, number, unit, and event-name colors.
+# Theme palettes control number, unit, and event-name colors. Unused space is black.
 THEMES = {
     THEME_CELEBRATION: {
-        "bg": "#140f24",
+        "bg": "#000000",
         "number": "#ffd166",
         "unit": "#c9b8ff",
         "event": "#f4f0ff",
         "muted": "#8c82a8",
     },
     THEME_BIRTHDAY: {
-        "bg": "#1c1028",
+        "bg": "#000000",
         "number": "#ff8ec9",
         "unit": "#ffd6a5",
         "event": "#fff4e6",
         "muted": "#9a7a96",
     },
     THEME_TRAVEL: {
-        "bg": "#071828",
+        "bg": "#000000",
         "number": "#7ec8ff",
         "unit": "#b8e0d2",
         "event": "#eef6ff",
         "muted": "#6d8799",
     },
     THEME_SUMMER: {
-        "bg": "#072033",
+        "bg": "#000000",
         "number": "#ffd23f",
         "unit": "#7ad7f0",
         "event": "#fff6d8",
         "muted": "#6e8ea3",
     },
     THEME_HOLIDAY: {
-        "bg": "#08140e",
+        "bg": "#000000",
         "number": "#e8f4ea",
         "unit": "#f2c14e",
         "event": "#ffd7d7",
         "muted": "#6f8a74",
     },
     THEME_LAUNCH: {
-        "bg": "#070714",
+        "bg": "#000000",
         "number": "#f4f1ff",
         "unit": "#ff9f4a",
         "event": "#d7e3ff",
         "muted": "#6d7090",
     },
     THEME_WEDDING: {
-        "bg": "#1a1018",
+        "bg": "#000000",
         "number": "#f0c36a",
         "unit": "#f3b3c4",
         "event": "#fff4ea",
         "muted": "#8a7380",
+    },
+    THEME_WORK: {
+        "bg": "#000000",
+        "number": "#7ec8ff",
+        "unit": "#f2c14e",
+        "event": "#e8eef6",
+        "muted": "#7a8796",
+    },
+    THEME_GRADUATION: {
+        "bg": "#000000",
+        "number": "#f0c36a",
+        "unit": "#d7e3ff",
+        "event": "#fff4ea",
+        "muted": "#8a8496",
+    },
+    THEME_BABY: {
+        "bg": "#000000",
+        "number": "#8fd6c8",
+        "unit": "#ffb3c6",
+        "event": "#fff4ea",
+        "muted": "#8a7d86",
+    },
+    THEME_HOME: {
+        "bg": "#000000",
+        "number": "#f4b183",
+        "unit": "#b8e0d2",
+        "event": "#fff4ea",
+        "muted": "#8a7a6c",
     },
 }
 
@@ -573,7 +605,7 @@ def scene_celebration(scale, frame):
         (4, 27, 16, 2, "#21163d"),
     ]
     extras = confetti_a if frame == 0 else confetti_b
-    return scene_box("#140f24", paint(burst + extras, scale), scale)
+    return scene_box("#000000", paint(burst + extras, scale), scale)
 
 def scene_birthday(scale, frame):
     flame = "#ffb703" if frame == 0 else "#ffd166"
@@ -596,7 +628,7 @@ def scene_birthday(scale, frame):
         (1, 4, 1, 1, "#ffd6e8"),
         (21, 3, 1, 1, "#fff0b3"),
     ]
-    return scene_box("#1c1028", paint(items, scale) + [
+    return scene_box("#000000", paint(items, scale) + [
         circle(3, 1, 6, "#ff6b9d", scale),
         circle(14, 0, 6, "#ffd166", scale),
     ], scale)
@@ -622,7 +654,7 @@ def scene_travel(scale, frame):
         (3, 25, 4, 1, "#c48a4a"),
         (7, 27, 1, 2, "#6a4220"),
     ]
-    return scene_box("#071828", paint(items, scale), scale)
+    return scene_box("#000000", paint(items, scale), scale)
 
 def scene_summer(scale, frame):
     wave = 23 + frame
@@ -641,7 +673,7 @@ def scene_summer(scale, frame):
         (7, 10, 4, 3, "#36b068"),
         (10 + frame, 27, 3, 2, "#f4e3b2"),
     ]
-    return scene_box("#072033", paint(items, scale) + [circle(16, 2, 6, "#ffd23f", scale)], scale)
+    return scene_box("#000000", paint(items, scale) + [circle(16, 2, 6, "#ffd23f", scale)], scale)
 
 def scene_holiday(scale, frame):
     twinkle = "#fff7c2" if frame == 0 else "#7ad7f0"
@@ -665,7 +697,7 @@ def scene_holiday(scale, frame):
         (20, 5 - frame, 1, 1, "#e8f4ea"),
         (12, 28, 1, 1, "#e8f4ea"),
     ]
-    return scene_box("#08140e", paint(items, scale), scale)
+    return scene_box("#000000", paint(items, scale), scale)
 
 def scene_launch(scale, frame):
     flame = "#ff9f4a" if frame == 0 else "#ffd166"
@@ -688,7 +720,7 @@ def scene_launch(scale, frame):
         (6, 26, 12, 2, "#3a3a5c"),
         (20, 14 + frame, 1, 1, "#f4f1ff"),
     ]
-    return scene_box("#070714", paint(items, scale), scale)
+    return scene_box("#000000", paint(items, scale), scale)
 
 def scene_wedding(scale, frame):
     heart = "#f3b3c4" if frame == 0 else "#ffd6e0"
@@ -703,12 +735,92 @@ def scene_wedding(scale, frame):
         (21, 6, 1, 1, "#f0c36a"),
         (8, 3, 1, 1, heart),
     ]
-    return scene_box("#1a1018", paint(items, scale) + [
+    return scene_box("#000000", paint(items, scale) + [
         circle(4, 8, 8, "#f0c36a", scale),
-        circle(6, 10, 4, "#1a1018", scale),
+        circle(6, 10, 4, "#000000", scale),
         circle(10, 10, 8, "#e8d5a3", scale),
-        circle(12, 12, 4, "#1a1018", scale),
+        circle(12, 12, 4, "#000000", scale),
     ], scale)
+
+def scene_work(scale, frame):
+    win_a = "#f2c14e" if frame == 0 else "#2c3d52"
+    win_b = "#2c3d52" if frame == 0 else "#f2c14e"
+    items = [
+        (2, 10, 7, 18, "#5a6d82"),
+        (10, 4, 8, 24, "#3e5168"),
+        (19, 14, 4, 14, "#6a7d92"),
+        (4, 12, 2, 2, win_a),
+        (4, 16, 2, 2, "#c5d5e4"),
+        (4, 20, 2, 2, win_b),
+        (12, 7, 2, 2, win_b),
+        (16, 7, 2, 2, "#c5d5e4"),
+        (12, 11, 2, 2, win_a),
+        (16, 11, 2, 2, win_b),
+        (12, 15, 2, 2, "#c5d5e4"),
+        (16, 15, 2, 2, win_a),
+        (13, 22, 3, 6, "#2c3848"),
+        (0, 28, 24, 4, "#2a241c"),
+        (3, 26, 6, 3, "#c48a4a"),
+        (4, 25, 4, 1, "#8b5a2b"),
+    ]
+    return scene_box("#000000", paint(items, scale), scale)
+
+def scene_graduation(scale, frame):
+    tassel_x = 16 if frame == 0 else 18
+    items = [
+        (6, 6, 12, 2, "#3d4a7a"),
+        (8, 3, 8, 3, "#4a5a8c"),
+        (11, 8, 2, 3, "#2c365c"),
+        (tassel_x, 8, 1, 6, "#f0c36a"),
+        (tassel_x - 1, 13, 3, 2, "#f0c36a"),
+        (5, 18, 14, 8, "#fff4ea"),
+        (5, 18, 2, 8, "#c43b3b"),
+        (17, 18, 2, 8, "#c43b3b"),
+        (8, 21, 8, 1, "#c9a24b"),
+        (8, 24, 6, 1, "#c9a24b"),
+    ]
+    return scene_box("#000000", paint(items, scale), scale)
+
+def scene_baby(scale, frame):
+    star = "#fff6d8" if frame == 0 else "#8fd6c8"
+    items = [
+        (3, 3, 1, 1, star),
+        (9, 2, 1, 1, "#fff6d8"),
+        (21, 8, 1, 1, star),
+        (1, 10, 1, 1, "#ffb3c6"),
+        (4, 16, 16, 2, "#e8d5c4"),
+        (4, 18, 2, 10, "#d9b384"),
+        (18, 18, 2, 10, "#d9b384"),
+        (4, 26, 16, 2, "#d9b384"),
+        (8, 18, 1, 8, "#fff4ea"),
+        (12, 18, 1, 8, "#fff4ea"),
+        (16, 18, 1, 8, "#fff4ea"),
+        (7, 21, 10, 4, "#ffe8ef"),
+        (9, 20, 6, 2, "#ffb3c6"),
+    ]
+    return scene_box("#000000", paint(items, scale) + [
+        circle(15, 2, 7, "#f0c36a", scale),
+        circle(17, 3, 6, "#000000", scale),
+    ], scale)
+
+def scene_home(scale, frame):
+    window = "#ffd166" if frame == 0 else "#ffe08a"
+    smoke_y = 2 + frame
+    items = [
+        (5, 14, 14, 14, "#c48a4a"),
+        (4, 13, 16, 2, "#8b5a2b"),
+        (6, 7, 12, 4, "#8b4030"),
+        (5, 10, 14, 4, "#8b4030"),
+        (16, 7, 3, 6, "#6a4220"),
+        (17, smoke_y, 2, 2, "#c5d5e4"),
+        (7, 17, 3, 3, window),
+        (14, 17, 3, 3, window),
+        (10, 22, 4, 6, "#3d2a1c"),
+        (0, 28, 24, 4, "#2f6b4f"),
+        (1, 25, 4, 3, "#d9b384"),
+        (2, 24, 2, 1, "#c48a4a"),
+    ]
+    return scene_box("#000000", paint(items, scale), scale)
 
 def render_scene(theme, scale, frame):
     if theme == THEME_BIRTHDAY:
@@ -723,6 +835,14 @@ def render_scene(theme, scale, frame):
         return scene_launch(scale, frame)
     if theme == THEME_WEDDING:
         return scene_wedding(scale, frame)
+    if theme == THEME_WORK:
+        return scene_work(scale, frame)
+    if theme == THEME_GRADUATION:
+        return scene_graduation(scale, frame)
+    if theme == THEME_BABY:
+        return scene_baby(scale, frame)
+    if theme == THEME_HOME:
+        return scene_home(scale, frame)
     return scene_celebration(scale, frame)
 
 # -------------------------
@@ -954,6 +1074,10 @@ def get_schema():
                     schema.Option(display = "Holiday", value = THEME_HOLIDAY),
                     schema.Option(display = "Launch", value = THEME_LAUNCH),
                     schema.Option(display = "Wedding", value = THEME_WEDDING),
+                    schema.Option(display = "Work", value = THEME_WORK),
+                    schema.Option(display = "Graduation", value = THEME_GRADUATION),
+                    schema.Option(display = "Baby", value = THEME_BABY),
+                    schema.Option(display = "Home", value = THEME_HOME),
                 ],
             ),
             schema.Location(

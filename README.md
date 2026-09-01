@@ -14,7 +14,11 @@ Count down to an event with a large remaining-time value, the event name, and an
 | --- | --- | --- |
 | ![Launch](docs/previews/launch.gif) | ![Wedding](docs/previews/wedding.gif) | ![Summer](docs/previews/summer.gif) |
 
-Themes: celebration, birthday, travel, summer, holiday, launch, and wedding.
+| Work | Graduation | Baby | Home |
+| --- | --- | --- | --- |
+| ![Work](docs/previews/work.gif) | ![Graduation](docs/previews/graduation.gif) | ![Baby](docs/previews/baby.gif) | ![Home](docs/previews/home.gif) |
+
+Themes: celebration, birthday, travel, summer, holiday, launch, wedding, work, graduation, baby, and home.
 
 Choose the event name and date, optionally count down to an exact time, and personalize the display with a theme and custom colors. Your location keeps the countdown aligned with your local date and time.
 
